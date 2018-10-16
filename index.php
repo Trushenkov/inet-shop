@@ -20,6 +20,7 @@ session_start();
     $value_page = 0;
     include("functions/db_connect.php");
     include("application/header.php");
+    include("application/additional_information.php");
     include("home.php");
     ?>
 </div>
