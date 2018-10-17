@@ -12,35 +12,15 @@ function _active_slide(carousel, item, idx, state) {
 	$('#slider-nav a').eq(index).addClass('active');
 };
 
-function _init_more_products(carousel) {
-	$('.more-nav .next').bind('click', function() {
-		carousel.next();
-		return false;
-	});
-	
-	$('.more-nav .prev').bind('click', function() {
-		carousel.prev();
-		return false;
-	});
-};
-
+/**
+ * Запуск слайдера и задание параметров слайдера
+ */
 $(document).ready(function() {
 	$("#slider-holder ul").jcarousel({
-		scroll: 1,
-		auto: 6,
-		wrap: 'both',
+		scroll: 1, //перелистывание на 1 картинку
+		auto: 6, //время показа одной картинки
+		wrap: 'both', //скролл и в одну и в другую сторону
 		initCallback: _init_slider,
-		itemFirstInCallback: _active_slide,
-		buttonNextHTML: null,
-		buttonPrevHTML: null
-	});
-	
-	$(".more-products-holder ul").jcarousel({
-		scroll: 2,
-		auto: 5,
-		wrap: 'both',
-		initCallback: _init_more_products,
-		buttonNextHTML: null,
-		buttonPrevHTML: null
+		itemFirstInCallback: _active_slide
 	});
 });
