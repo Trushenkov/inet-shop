@@ -10,7 +10,7 @@ cart($link, $all_price, getID($_SESSION['username']), $count);
 <!--Header -->
 <div class="nav-bar">
     <div class="shop_name">
-        <a href="#">
+        <a href="index.php">
             <img src="../css/images/icon_meta.png" alt="Логотип" class="logo">
             <img src="../css/images/1.png" alt="internet-shop" class="internet-shop">
             <img src="../css/images/2.png" alt="internet-shop2"  class="internet-shop-2">
