@@ -8,7 +8,7 @@ function connectDB()
 /**
  * Функция для проверки существования введенного username в базе данных
  *
- * @param $username введённый username
+ * @param $username - имя пользователя
  * @return int количество повторений введенного username
  *
  */
@@ -22,7 +22,7 @@ function checkLoginUser($username)
 /**
  * Функция для проверки существования введенного email в базе данных
  *
- * @param $email введенный email
+ * @param $email - email
  * @return int количество повторений введенного email
  */
 function checkEmailUser($email)
@@ -35,7 +35,7 @@ function checkEmailUser($email)
 /**
  * Функция для корректного ввода пароля. Пароль должен быть от 3 до 20 символов.
  *
- * @param $password введенный пароль
+ * @param $password - пароль
  * @return int длина пароля от 3 до 20 символов
  */
 function validatePassword($password)
