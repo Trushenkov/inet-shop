@@ -27,7 +27,7 @@ require_once("functions/users.php");
             <br>
             <hr>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2390.0534678151294!2d44.986944655508985!3d53.198957294422776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414101ab88dba9a1%3A0xde0bb0db8fd514b3!2z0YPQuy4g0J_Rg9GI0LrQuNC90LAsIDEzNywg0J_QtdC90LfQsCwg0J_QtdC90LfQtdC90YHQutCw0Y8g0L7QsdC7LiwgNDQwMDA4!5e0!3m2!1sru!2sru!4v1494331092508"
-                    width="930" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
             <br>
             <hr>
             <br>
