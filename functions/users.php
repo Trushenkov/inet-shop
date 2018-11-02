@@ -5,6 +5,44 @@ function connectDB()
     return new mysqli("localhost", "root", "", "all_notebooks");
 }
 
+/**
+ * Функция для проверки существования введенного username в базе данных
+ *
+ * @param $username введённый username
+ * @return int количество повторений введенного username
+ *
+ */
+function checkLoginUser($username)
+{
+    $link = connectDB();
+    $result = mysqli_query($link,"SELECT * FROM `users` WHERE `username` ='$username' ");
+    return mysqli_num_rows($result);
+}
+
+/**
+ * Функция для проверки существования введенного email в базе данных
+ *
+ * @param $email введенный email
+ * @return int количество повторений введенного email
+ */
+function checkEmailUser($email)
+{
+    $link = connectDB();
+    $result = mysqli_query($link, "SELECT * FROM `users` WHERE `email` = '$email'");
+    return mysqli_num_rows($result);
+}
+
+/**
+ * Функция для корректного ввода пароля. Пароль должен быть от 3 до 20 символов.
+ *
+ * @param $password введенный пароль
+ * @return int длина пароля от 3 до 20 символов
+ */
+function validatePassword($password)
+{
+    return strlen($password) > 3 && strlen($password) < 20;
+}
+
 function closeDB($mysqli)
 {
     $mysqli->close();
