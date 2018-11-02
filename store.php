@@ -31,17 +31,17 @@ $id_user = $_SESSION["username"];
             do {
                 echo '
         <div id="content-notebooks">
-            <div class="products">
+            <div class="products-store">
                 <div class="cl">&nbsp;</div>
                 <ul>
-                    <li><img src="css/images/products/' . $rows["image"] . '.jpg" alt="">
-                        <div class="product-info">
+                    <li><img src="css/images/products/' . $rows["image"] . '.jpg" alt="картинка" class="product-img-store" >
+                        <div class="product-info-store">
                         
                             <h3>' . $rows["product"] . '</h3>
-                            <div class="product-desc">
+                            <div class="product-desc-store">
                                 <h4>Ноутбук</h4>
                                 <p>' . $rows["name"] . '</p>
-                                <strong class="price">' . $rows["price"] . ' &#8381</strong>
+                                <strong class="price-store">' . $rows["price"] . ' &#8381</strong>
                             </div>
                             <div class="cart-product-store">
                                 <div class="id-user">' . getID($id_user) . '</div>
