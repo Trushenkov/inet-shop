@@ -18,9 +18,9 @@ function _active_slide(carousel, item, idx, state) {
 $(document).ready(function() {
 	$("#slider-holder ul").jcarousel({
 		scroll: 1, //перелистывание на 1 картинку
-		auto: 6, //время показа одной картинки
+		auto: 5, //время показа одной картинки
 		wrap: 'both', //скролл и в одну и в другую сторону
 		initCallback: _init_slider,
-		itemFirstInCallback: _active_slide
+		itemFirstInCallback: _active_slide,
 	});
 });
