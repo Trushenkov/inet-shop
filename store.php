@@ -17,7 +17,7 @@ $id_user = $_SESSION["username"];
 <div class="shell">
     <?php
     $value_page = 1;
-    include("application/header.php");
+    include("application/header.php"); //Подключение хедера
     ?>
     <div id="main">
         <div class="cl">&nbsp;</div>
@@ -81,7 +81,7 @@ $id_user = $_SESSION["username"];
         ?>
         <script type="text/javascript" src="js/script.js"></script>
     </div>
-    <?php include("application/footer.php") ?>
+    <?php include("application/footer.php") ?> <!--Подключение футера-->
 </div>
 <!-- End Shell -->
 </body>
