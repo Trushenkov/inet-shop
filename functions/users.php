@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Функция для подключения к базе данных
+ *
+ * @return mysqli
+ */
 function connectDB()
 {
     return new mysqli("localhost", "root", "", "all_notebooks");
@@ -43,11 +48,23 @@ function validatePassword($password)
     return strlen($password) > 3 && strlen($password) < 20;
 }
 
+/**
+ * Функция для закрытия подключения к базе данных
+ *
+ * @param $mysqli
+ */
 function closeDB($mysqli)
 {
     $mysqli->close();
 }
 
+/**
+ * Функция для регистрации пользователя и записи в таблицу 'users' в базе данных
+ *
+ * @param $username - username
+ * @param $email - email
+ * @param $password - password
+ */
 function regUser($username, $email, $password)
 {
     $link = connectDB();
@@ -56,6 +73,13 @@ function regUser($username, $email, $password)
     closeDB($link);
 }
 
+/**
+ * Функция для регистрации пользователя с правами администратора
+ *
+ * @param $username - admin username
+ * @param $email - admin email
+ * @param $password - admin password
+ */
 function regAdmin($username, $email, $password)
 {
     $link = connectDB();
@@ -64,6 +88,13 @@ function regAdmin($username, $email, $password)
     closeDB($link);
 }
 
+/**
+ * Функция для проверки введенного пароля пользователя и пароля, указанного при регистрации, хранящегося в базе данных
+ *
+ * @param $username - username
+ * @param $password - password
+ * @return bool true if passwords is same, else false
+ */
 function checkUser($username, $password)
 {
     if (($username == "") || ($password == "")) return false;
@@ -75,6 +106,12 @@ function checkUser($username, $password)
     return $real_password == $password;
 }
 
+/**
+ * Функция для получения id пользователя с указанным 'username'
+ *
+ * @param $username - username
+ * @return bool id user
+ */
 function getID($username)
 {
     if ($username == "") return false;
@@ -84,6 +121,12 @@ function getID($username)
     return $user['id'];
 }
 
+/**
+ * Функция для получения email пользователя с указанным 'username'
+ *
+ * @param $username - username
+ * @return bool email user
+ */
 function getEMAIL($username)
 {
     if ($username == "") return false;
@@ -93,6 +136,12 @@ function getEMAIL($username)
     return $user['email'];
 }
 
+/**
+ * Функция для вывода списка всех администраторов
+ *
+ * @param $username - username
+ * @return mixed - list of admins
+ */
 function isAdmin($username)
 {
     $mysqli = connectDB();
