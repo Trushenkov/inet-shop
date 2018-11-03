@@ -5,7 +5,7 @@ include("functions/db_connect.php");
 require_once("functions/users.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Поддержка</title>
@@ -14,10 +14,12 @@ require_once("functions/users.php");
 </head>
 <body>
 <div class="shell">
+    <!--Подключение хедера-->
     <?php
     include("application/header.php");
     ?>
 
+    <!--Main content-->
     <div id="main">
         <div class="user-position">
             <p>Мы рады, что вы посетили наш <span>"Интернет-магазин мебели для дома"</span>.</p>
@@ -33,6 +35,8 @@ require_once("functions/users.php");
             <br>
         </div>
     </div>
+
+    <!--Подключение футера-->
     <?php
     include("application/footer.php");
     ?>
