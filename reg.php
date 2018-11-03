@@ -3,6 +3,7 @@ session_start();
 require_once("functions/users.php");
 $value_page = 3;
 include("functions/db_connect.php");
+//Регистрация
 if (isset($_POST['reg'])) {
     $username = htmlspecialchars($_POST['username']);
     $email = htmlspecialchars($_POST['email']);
@@ -60,7 +61,7 @@ if (isset($_POST['reg'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
@@ -69,7 +70,7 @@ if (isset($_POST['reg'])) {
 <body>
 <div class="shell">
     <?php
-    include("application/header.php");
+    include("application/header.php"); //Подключение хедера
     if ($_SESSION["error_username"] == 1) echo '<p style="text-align: center;  margin-top: 30px;"><span style="color: red">Этот логин  уже занят! Введите, пожалуйста, другой  логин</p>';
     if ($_SESSION["error_email"] == 1) echo '<p style="text-align: center;  margin-top: 30px;"><span style="color: red">Пользователь с таким email уже существует. Введите, пожалуйста, другой email</span></p>';
     if ($_SESSION["error_password"] == 1) echo '<p style="text-align: center;  margin-top: 30px;"><span style="color: red">Извините, длина пароля должна быть от 3 до 20 символов. Придумайте другой пароль</span></p>';
@@ -91,7 +92,7 @@ if (isset($_POST['reg'])) {
             </div>
         </div>
         ';
-    include("application/footer.php");
+    include("application/footer.php"); //Подключение футера
     ?>
 </div>
 </body>
