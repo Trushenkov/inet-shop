@@ -7,7 +7,7 @@
  */
 function connectDB()
 {
-    return new mysqli("localhost", "root", "", "all_notebooks");
+    return new mysqli("localhost", "root", "", "mebel_database");
 }
 
 /**
