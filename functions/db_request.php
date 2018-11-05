@@ -95,7 +95,7 @@ function select()
  */
 function search_request($firstValue, $secondValue, $thirdValue, $sign)
 {
-    $request = "WHERE (`product` LIKE '%$firstValue%' $sign `name` LIKE '%$secondValue%')";;
+    $request = "WHERE (`product` LIKE '%$firstValue%' $sign `name` LIKE '%$secondValue%')";
     if ($thirdValue != null) {
         $request .= " AND `name` LIKE '%$thirdValue%'";
     }
@@ -179,7 +179,7 @@ function sortProcessing($sort)
 function sidebarResult($link, $search, $product, $min, $max, $sort)
 {
     if ($search == null && $product == null && $sort == null && $min == null && $max == null) {
-        return mysqli_query($link, select() . " WHERE `new` = 1" . sortProcessing("max"));
+        return mysqli_query($link, select() . sortProcessing("max"));
     } elseif ($search != null && $product != null && $sort != null) {
         return mysqli_query($link, select() . searchProcessing($search) . priceProcessing($min, $max, true) . sortProcessing($sort));
     }
@@ -298,23 +298,23 @@ function deleteStrCart($link, $table_db, $id)
  * Функция для добавления товара в таблицу 'products'
  *
  * @param $link
- * @param $product
- * @param $name
- * @param $image
- * @param $slide
- * @param $new
- * @param $price
- * @param $display
- * @param $display_size
- * @param $CPU
- * @param $frequency
- * @param $RAM
- * @param $memory
- * @param $GPU
- * @param $other
+ * @param $product Продукт (Например, диван-кровать)
+ * @param $name Название (Например, Лиссабон)
+ * @param $image Изображение
+ * @param $slide Будет ли на слайде. 1 - да, 0 - нет.
+ * @param $price Цена
+ * @param $collection Коллекция
+ * @param $manufacturer Производитель
+ * @param $security Гарантия
+ * @param $life_time Срок службы
+ * @param $material Материал
+ * @param $color Цвет
+ * @param $width Ширина
+ * @param $height Высота
+ * @param $depth Глубина
  */
-function addProduct($link, $product, $name, $image, $slide, $new, $price, $display, $display_size, $CPU, $frequency, $RAM, $memory, $GPU, $other)
+function addProduct($link, $product, $name, $image, $slide, $price, $collection, $manufacturer, $security, $life_time, $material, $color, $width, $height, $depth)
 {
-    $result = mysqli_query($link, "INSERT INTO products (`product`,`name`,`image`,`slide`,`new`,`price`,`display`,`display_size`,`CPU`,`frequency`,`RAM`,`memory`,`GPU`,`other`) VALUES 
-('$product','$name','$image','$slide','$new','$price','$display','$display_size','$CPU','$frequency','$RAM','$memory','$GPU','$other')");
+    $result = mysqli_query($link, "INSERT INTO products (`product`,`name`,`image`,`slide`,`price`,`collection`,`manufacturer`,`security`,`life_time`,`material`,`color`,`width`,`height`,`depth`) VALUES 
+('$product','$name','$image','$slide','$price','$collection','$manufacturer','$security','$life_time','$material','$color','$width','$height','$depth')");
 }

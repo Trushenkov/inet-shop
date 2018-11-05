@@ -10,7 +10,7 @@
                 $rows = mysqli_fetch_array($result);
                 do {
                     echo '
-            <li><a href="store.php?id=' . $rows["id"] . '"><img src="css/images/products/' . $rows["image"] . '-slide.jpg"</a>';
+            <li><a href="store.php?id=' . $rows["id"] . '"><img src="css/images/products_mebel/' . $rows["image"] . '-slide.jpg"</a>';
                     $index++;
                 } while ($rows = mysqli_fetch_array($result));
             }

@@ -12,7 +12,7 @@ require_once("functions/db_request.php");
                 <label>Название</label>
                 <?php
                 echo '
-                <input type="text" name="search" value="' . $search . '" placeholder="Например: ACER Aspire es1-530g" class="field"/>
+                <input type="text" name="search" value="' . $search . '" placeholder="Например: Диван" class="field"/>
 '; ?>
                 <label>Категория</label>
                 <select class="field" name="product">

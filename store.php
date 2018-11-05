@@ -34,12 +34,11 @@ $id_user = $_SESSION["username"];
             <div class="products-store">
                 <div class="cl">&nbsp;</div>
                 <ul>
-                    <li><img src="css/images/products/' . $rows["image"] . '.jpg" alt="картинка" class="product-img-store" >
+                    <li><img src="css/images/products_mebel/' . $rows["image"] . '.jpg" alt="картинка" class="product-img-store" >
                         <div class="product-info-store">
-                        
                             <h3>' . $rows["product"] . '</h3>
                             <div class="product-desc-store">
-                                <h4>Ноутбук</h4>
+                                <h4>Производитель: '. $rows['manufacturer'].'</h4>
                                 <p>' . $rows["name"] . '</p>
                                 <strong class="price-store">' . $rows["price"] . ' &#8381</strong>
                             </div>
@@ -62,14 +61,15 @@ $id_user = $_SESSION["username"];
 
     <div class="description">
         <ul>
-            <li><span>Дисплей: </span>' . $rows["display"] . '</li>
-            <li><span>Разрешение экрана: </span>' . $rows["display_size"] . '</li>
-            <li><span>Процессор: </span>' . $rows["CPU"] . '</li>
-            <li><span>Частота процессора: </span>' . $rows["frequency"] . '</li>
-            <li><span>Оперативная память: </span>' . $rows["RAM"] . '</li>
-            <li><span>Память </span>' . $rows["memory"] . '</li>
-            <li><span>Видеокарта: </span>' . $rows["GPU"] . '</li>
-            <li><span>Другие: </span>' . $rows["other"] . '</li>
+            <li><span>Коллекция: </span>' . $rows["collection"] . '</li>
+            <li><span>Производитель: </span>' . $rows["manufacturer"] . '</li>
+            <li><span>Гарантия: </span>' . $rows["security"] . ' мес.</li> 
+            <li><span>Срок службы: </span>' . $rows["life_time"] . ' год.</li>
+            <li><span>Материал: </span>' . $rows["material"] . '</li>
+            <li><span>Цвет: </span>' . $rows["color"] . '</li>
+            <li><span>Ширина: </span>' . $rows["width"] . ' см.</li>
+            <li><span>Высота: </span>' . $rows["height"] . ' см.</li>
+            <li><span>Глубина: </span>' . $rows["depth"] . ' см.</li>
         </ul>
     </div>
 </div>';
