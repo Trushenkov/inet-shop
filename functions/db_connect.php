@@ -1,5 +1,5 @@
 <?php
-$db_name = "all_notebooks";
+$db_name = "mebel_database";
 $link = mysqli_connect("localhost", "root", "", $db_name);
 /* Проверка подключения к базе данных */
 if (mysqli_connect_errno()) {
