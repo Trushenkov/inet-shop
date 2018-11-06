@@ -6,6 +6,7 @@ session_start();
     <meta charset="UTF-8">
     <title>Интернет-магазин мебели для дома</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" type="text/css" href="css/images/icon-for-browser-title.png">
 
     <!-- JS -->
     <script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
