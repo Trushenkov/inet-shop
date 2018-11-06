@@ -12,8 +12,9 @@ require_once("functions/db_request.php");
                 <label>Название</label>
                 <?php
                 echo '
-                <input type="text" name="search" value="' . $search . '" placeholder="Например: Диван" class="field"/>
-'; ?>
+                <input type="text" id="input-search" name="search" value="' . $search . '" placeholder="Например: Диван" class="field"/>
+                <br>
+                <img src="../css/images/search.png" class="search-icon">'; ?>   
                 <label>Категория</label>
                 <select class="field" name="product">
                     <?php
