@@ -28,7 +28,7 @@ if ($row == 0 && $count > 0) {
         $query = "DELETE FROM `cart` WHERE `cart_id` = '$cart_id' AND `id_user`='$id_user'";
         mysqli_real_query($link, $query);
     } else {
-        $query = "UPDATE `all_notebooks`.`cart` SET `count` = ' $count_products' WHERE `cart`.`cart_id` = '$cart_id' AND `cart`.`id_user`='$id_user'";
+        $query = "UPDATE `cart` SET `count` = ' $count_products' WHERE `cart`.`cart_id` = '$cart_id' AND `cart`.`id_user`='$id_user'";
         mysqli_real_query($link, $query);
     }
 }
