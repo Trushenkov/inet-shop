@@ -9,6 +9,7 @@ $id_user = $_SESSION["username"];
     <meta charset="UTF-8">
     <title>Магазин</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" type="text/css" href="css/images/icon-for-browser-title.png">
     <!--[if lte IE 6]>
     <link rel="stylesheet" href="css/ie6.css" type="text/css"><![endif]-->
 </head>
