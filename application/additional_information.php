@@ -1,5 +1,4 @@
-<img id="img-logo" src="../css/images/logo.jpg">
-<!-- Информационный блок -->
+<img id="img-logo" src="../css/images/provence.jpg">
 <div id="personal-info">
     <p>Звонок бесплатный</p>
     <h3>8 (800) 888-70-07</h3>
@@ -9,11 +8,3 @@
     <p>Суббота, Воскресенье - Выходные</p>
     <img src="../css/images/time.png">
 </div>
-<!-- Форма поиска -->
-<!--<div id="block-search">-->
-<!--    <form method="GET" action="search.php?q=">-->
-<!--        <img src="../css/images/search.png">-->
-<!--        <input type="text" id="input-search" name="q" placeholder="Поиск среди более 100 000 товаров">-->
-<!--        <input type="submit" id="button-search" value="Поиск">-->
-<!--    </form>-->
-<!--</div>-->

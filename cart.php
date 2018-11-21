@@ -20,9 +20,7 @@ switch ($action) {
     <meta charset="UTF-8">
     <title>Корзина товаров</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <!--[if lte IE 6]>
-        <link rel="stylesheet" href="css/ie6.css" type="text/css">
-    <![endif]-->
+    <link rel="shorcut icon" type="text/css" href="css/images/icon-for-browser-title.png">
 </head>
 <body>
 <!-- Shell -->

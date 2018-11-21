@@ -13,14 +13,6 @@ function allRequest($link)
     return mysqli_query($link, "SELECT * FROM `products` WHERE 1");
 }
 
-
-/**
- * Функция для
- *
- * @param $link
- * @param $rows
- * @return int
- */
 function numProducts($link, $rows)
 {
 
@@ -28,12 +20,6 @@ function numProducts($link, $rows)
     return mysqli_num_rows($result);
 }
 
-/**
- * Функция для формирования
- *
- * @param $link
- * @param $array2
- */
 function checkCategories($link, &$array2)
 {
     $result = allRequest($link);
@@ -60,13 +46,6 @@ function checkCategories($link, &$array2)
     }
 }
 
-/**
- * Функция для вывода цены товара
- *
- * @param $link
- * @param $value
- * @return mixed
- */
 function price($link, $value)
 {
     $result = mysqli_query($link, "SELECT $value(price) FROM `products`");
@@ -77,7 +56,7 @@ function price($link, $value)
 /**
  * Функция для выборки всех данных из таблицы 'products'
  *
- * @return данные из таблицы x"products"
+ * @return данные из таблицы "products"
  */
 function select()
 {
@@ -102,12 +81,6 @@ function search_request($firstValue, $secondValue, $thirdValue, $sign)
     return $request;
 }
 
-/**
- * Функция для
- *
- * @param $search
- * @return bool|mysqli_result|null|string
- */
 function searchProcessing($search)
 {
     global $result;
@@ -230,21 +203,13 @@ function cart($link, &$all_price, $id_user, &$count)
     }
 }
 
-
-/**
- * Функция для вывода количества товара в корзине пользователя
- *
- * @param $link
- * @param $id_user
- * @return int количество товара в корзине пользователя
- */
 function getPscCart($link, $id_user)
 {
     return mysqli_num_rows(mysqli_query($link, "SELECT * FROM `cart`,`products` WHERE products.id = cart.id_product AND cart.id_user='$id_user'"));
 }
 
 /**
- * Функция для вывода всех товаров из базы данных на страницу сайта "Магазин"
+ * Функция для вывода товаров из базы данных на страницу сайта "Магазин"
  *
  * @param $link
  * @param $id
@@ -255,13 +220,7 @@ function store($link, $id)
     if ($id == null) return mysqli_query($link, "SELECT * FROM `products` WHERE 1");
     else return mysqli_query($link, "SELECT * FROM `products` WHERE `id`='$id'");
 }
-/**
- * Функция для
- *
- * @param $link
- * @param $table_db
- * @return bool|mysqli_result
- */
+
 function numDB($link, $table_db)
 {
     return mysqli_query($link, "SELECT * FROM $table_db WHERE 1");

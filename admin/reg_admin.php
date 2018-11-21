@@ -28,3 +28,4 @@ if (isset($_POST['reg'])) {
         $_SESSION["reg_success"] = 1;
     }
 }
+?>

@@ -234,9 +234,11 @@ a.cart-link:hover {
 
 /*Логотип "Быстрая доставка"*/
 #img-logo{
-    width: 550px;
-    height: 150px;
+    width: 700px;
+    /*height:150px;*/
     margin-top: 12px;
+    /*margin-left: 10%;*/
+    padding: 2%;
     /* position: absolute; */
     /* border: 1px solid black; */
 }
@@ -286,14 +288,16 @@ a.cart-link:hover {
     margin-top: -30px;
 }
 
-#block-search input#input-search{
-    width: 250px;
-    height: 27px;
-    float: left;
+#input-search{
+    width: 245px;
+    /*height: 27px;*/
+    /*float: left;*/
+    padding-left: 25px;
     border: 1px solid #E1E1E2;
-    font:14px sans-serif;
-    padding-left: 26px;
+    /*font:14px sans-serif;*/
+    /*padding-left: 26px;*/
     outline: none;
+    margin-bottom: 0;
 }
 
 #button-search{
@@ -325,6 +329,14 @@ a.cart-link:hover {
     float: left;
     /*width: 226px;*/
     width: 24%;
+}
+
+.search-icon{
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 7px;
 }
 
 #content {

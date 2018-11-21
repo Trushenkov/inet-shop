@@ -144,8 +144,8 @@ function getEMAIL($username)
  */
 function isAdmin($username)
 {
-    $mysqli = connectDB();
-    $result = mysqli_query($mysqli, "SELECT * FROM users WHERE `username`='$username'");
+    $link = connectDB();
+    $result = mysqli_query($link, "SELECT * FROM users WHERE `username`='$username'");
     $rows = $result->fetch_assoc();
     return $rows["admin"];
-}
+} 

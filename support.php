@@ -11,6 +11,7 @@ require_once("functions/users.php");
     <title>Поддержка</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/ie6.css" type="text/css">
+    <link rel="shorcut icon" href="css/images/icon-for-browser-title.png">
 </head>
 <body>
 <div class="shell">

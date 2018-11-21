@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once("start.php");
 require_once("../functions/db_request.php");
@@ -50,7 +51,7 @@ $action = $_GET["action"];
                 </form>';
                 break;
             case 'add_product':
-                require_once("add_product.php");
+            require_once "add_product.php";
                 echo '
                 <form enctype="multipart/form-data" class="login" name="auth" action="" method="post">
                     <h1 class="h1">Добавить товар в БД</h1>
